@@ -6,6 +6,7 @@ class Node:
         self.right = None
         self.left = None
 class Pyramid:
+    # This  Data Structure help to store data in pyramid like structure                                     
     def __init__(self):
         
         ROOT_node = Node("ROOT")
