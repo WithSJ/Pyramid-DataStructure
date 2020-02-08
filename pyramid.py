@@ -10,7 +10,6 @@ class Pyramid:
     def __init__(self):
         
         ROOT_node = Node("ROOT")
-
         self.root = ROOT_node 
         self.left_last = self.root
         self.right_last = self.root
@@ -61,7 +60,7 @@ class Pyramid:
         self.down_last.left = self.left_last
         self.down_last.up = temp
 
-    def up_to_down_list(self):
+    def vertical_list(self):
         """
             Return Up to Down Data list 
         """
@@ -76,7 +75,7 @@ class Pyramid:
             lis.append(temp.data)
             return lis
 
-    def left_to_right_list(self):
+    def horizontal_list(self):
         """
             Return Left to Right Data list 
         """
@@ -91,7 +90,7 @@ class Pyramid:
             lis.append(temp.data)
             return lis
 
-    def right_to_left_list(self):
+    def horizontal_rev_list(self):
         """
             Return Right to List Data list 
         """
@@ -107,7 +106,7 @@ class Pyramid:
             lis.append(temp.data)
             return lis
 
-    def down_to_up_list(self):
+    def vertical_rev_list(self):
         """
             Return Down to UP Data list 
         """
@@ -242,13 +241,13 @@ if __name__ == "__main__":
         elif ch == "2":
                 myPyramid.graph_view()
         elif ch == "3":
-            print(myPyramid.up_to_down_list())
+            print(myPyramid.vertical_list())
         elif ch == "4":
-            print(myPyramid.down_to_up_list())
+            print(myPyramid.vertical_rev_list())
         elif ch == "5":
-            print(myPyramid.left_to_right_list())
+            print(myPyramid.horizontal_list())
         elif ch == "6":
-            print(myPyramid.right_to_left_list())
+            print(myPyramid.horizontal_rev_list())
         elif ch == "7":
             print(myPyramid.pop_pyramid_layer())
         elif ch == "8":
