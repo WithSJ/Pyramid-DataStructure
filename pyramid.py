@@ -217,9 +217,51 @@ class Pyramid:
                 return del_down,del_right,del_up,del_left
             except:
                 return self.pop_pyramid_layer()
-
-
-
+        
+    def root_to_right_list(self):
+        """
+            Return root to right end data list of pyramid
+        """
+        lis=[]
+        temp = self.root
+        while temp.right != None:
+            lis.append(temp.data)
+            temp = temp.right
+        lis.append(temp.data)
+    
+    def root_to_left_list(self):
+        """
+            Return root to  left end data list of pyramid
+        """
+        lis=[]
+        temp = self.root
+        while temp.left != None:
+            lis.append(temp.data)
+            temp = temp.left
+        lis.append(temp.data)
+            
+    def root_to_up_list(self):
+        """
+            Return root to up end data list of pyramid
+        """
+        lis=[]
+        temp = self.root
+        while temp.up != None:
+            lis.append(temp.data)
+            temp = temp.up
+        lis.append(temp.data)
+    
+    def root_to_down_list(self):
+        """
+            Return root to down end data list of pyramid
+        """
+        lis=[]
+        temp = self.root
+        while temp.down != None:
+            lis.append(temp.data)
+            temp = temp.down
+        lis.append(temp.data)
+    
 
 if __name__ == "__main__":
     import os
