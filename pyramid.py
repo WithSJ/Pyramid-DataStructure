@@ -228,6 +228,7 @@ class Pyramid:
             lis.append(temp.data)
             temp = temp.right
         lis.append(temp.data)
+        return lis
     
     def root_to_left_list(self):
         """
@@ -239,7 +240,8 @@ class Pyramid:
             lis.append(temp.data)
             temp = temp.left
         lis.append(temp.data)
-            
+        return lis
+
     def root_to_up_list(self):
         """
             Return root to up end data list of pyramid
@@ -250,7 +252,8 @@ class Pyramid:
             lis.append(temp.data)
             temp = temp.up
         lis.append(temp.data)
-    
+        return lis
+
     def root_to_down_list(self):
         """
             Return root to down end data list of pyramid
@@ -261,7 +264,7 @@ class Pyramid:
             lis.append(temp.data)
             temp = temp.down
         lis.append(temp.data)
-    
+        return lis
 
 if __name__ == "__main__":
     import os
@@ -299,6 +302,15 @@ if __name__ == "__main__":
             print(myPyramid.pop_pyramid_layer())
         elif ch == "8":
             print(myPyramid.dequeue_pyramid())
+        elif ch == "9":
+            print(myPyramid.root_to_right_list())
+        elif ch == "10":
+            print(myPyramid.root_to_left_list())
+        elif ch == "11":
+            print(myPyramid.root_to_up_list())
+        elif ch == "12":
+            print(myPyramid.root_to_down_list())
+        
         else:
             print("Plese Enter Correct number")
         
