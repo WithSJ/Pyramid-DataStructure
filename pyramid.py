@@ -16,7 +16,7 @@ class Pyramid:
         self.up_last = self.root 
         self.down_last = self.root
     
-    def insert_pyramid_layer(self,DownData=None,RightData=None,UpData=None,LeftData=None):
+    def insert_pyramid_layer(self,UpData=None,LeftData=None,DownData=None,RightData=None):
         """
             This Method use to insert data in pyramid layer 
             take four parameter as 
@@ -185,7 +185,7 @@ class Pyramid:
             self.left_last = self.left_last.right
             self.left_last.left = None
             
-            return pop_down,pop_right,pop_up,pop_left
+            return pop_up,pop_left,pop_down,pop_right
 
     def dequeue_pyramid(self):
         """
@@ -214,7 +214,7 @@ class Pyramid:
                 self.root.right.right.left = self.root
                 self.root.right = self.root.right.right
                 
-                return del_down,del_right,del_up,del_left
+                return del_up,del_left,del_down,del_right
             except:
                 return self.pop_pyramid_layer()
         
