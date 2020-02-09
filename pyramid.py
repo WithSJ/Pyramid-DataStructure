@@ -7,9 +7,9 @@ class Node:
         self.left = None
 class Pyramid:
     # This  Data Structure help to store data in pyramid like structure                                     
-    def __init__(self):
-        
-        ROOT_node = Node("ROOT")
+    def __init__(self,rootdata="ROOT"):
+        self.rootdata = rootdata
+        ROOT_node = Node(rootdata)
         self.root = ROOT_node 
         self.left_last = self.root
         self.right_last = self.root
@@ -140,7 +140,7 @@ class Pyramid:
             lenth = len(st)//2 + len(lis)//2 -2
             
             temp = self.up_last
-            while temp.data != "ROOT":
+            while temp.data != self.rootdata:
                 print(" "*lenth,temp.data)
                 print(" "*lenth,"|")
                 temp = temp.down
