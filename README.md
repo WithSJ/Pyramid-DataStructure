@@ -1,13 +1,13 @@
 # Pyramid-DataStructure
-This  Data Structure help to store data in pyramid like structure     
+This  Data Structure helps to store data in a pyramid-like structure     
 
-## Create Pyramid
-Create root node for pyramid 
+## Create a Pyramid
+Create a root node for pyramid 
 
     from pyramid import Pyramid
     mypyramid = Pyramid()
 
-**Note** :- When createing object of pyramid by default "ROOT" is data you can change it
+**Note** :- When creating an object of the pyramid by default "ROOT" is data you can change it
 
     mypyramid = Pyramid("Start")
 
@@ -25,7 +25,7 @@ Create root node for pyramid
 
 ## Function you can use 
 **|1| Insert Pyramid Lyer**
-    Insert data in pyramid layer this function take 4 arguments and return none
+    Insert data in pyramid layer this function takes 4 arguments and return none
     
     insert_pyramid_layer(self , UpData = None , LeftData = None , DownData = None , RightData = None )
 
@@ -75,12 +75,12 @@ This Function return root to right all data
     root_to_right_list(self)
 
 **|11| Pop Pyramid Layer**
-This Function delete pyramid layer that insert in last and return tupple of deleted node data ( up, left, down ,right )
+This Function delete pyramid layer that inserts in last and returns a tuple of deleted node data ( up, left, down, right )
     
     pop_pyramid_layer(self):
 
 **|12| DeQueue Pyramid Layer**
-This Functiion delete pyramid layer that insert first and return tupple of deleted node data ( up, left, down ,right )
+This Function delete pyramid layer that inserts first and returns a tuple of deleted node data ( up, left, down, right )
 
     dequeue_pyramid(self):
 
