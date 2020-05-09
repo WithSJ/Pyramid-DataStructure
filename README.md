@@ -7,23 +7,23 @@ Create root node for pyramid
     from pyramid import Pyramid
     mypyramid = Pyramid()
 
-Note :- When createing object of pyramid by default "ROOT" is data you can change it
+**Note** :- When createing object of pyramid by default "ROOT" is data you can change it
 
     mypyramid = Pyramid("Start")
 
 ## Pointers
-    **Root Pointer**
-    self.root
-    **LEFT LAST Pointer**
-    self.left_last
-    **RIGHT LAST Pointer**
-    self.right_last 
-    **UP LAST Pointer**
-    self.up_last = self.root 
-    **DOWN LAST Pointer**
-    self.down_last = self.root
+> **Root Pointer**
+> self.root
+> **LEFT LAST Pointer**
+> self.left_last
+> **RIGHT LAST Pointer**
+> self.right_last 
+> **UP LAST Pointer**
+> self.up_last = self.root 
+> **DOWN LAST Pointer**
+> self.down_last = self.root
 
-# Function you can use 
+## Function you can use 
 **|1| Insert Pyramid Lyer**
     Insert data in pyramid layer this function take 4 arguments and return none
     
