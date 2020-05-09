@@ -12,16 +12,16 @@ Create root node for pyramid
     mypyramid = Pyramid("Start")
 
 ## Pointers
-> **Root Pointer**
-> self.root
-> **LEFT LAST Pointer**
-> self.left_last
-> **RIGHT LAST Pointer**
-> self.right_last 
-> **UP LAST Pointer**
-> self.up_last = self.root 
-> **DOWN LAST Pointer**
-> self.down_last = self.root
+#### Root Pointer
+    self.root
+#### Left Last Pointer
+    self.left_last
+#### Right Last Pointer
+    self.right_last 
+#### Up Last Pointer
+    self.up_last
+#### Down Last Pointer
+    self.down_last
 
 ## Function you can use 
 **|1| Insert Pyramid Lyer**
