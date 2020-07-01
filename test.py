@@ -2,7 +2,7 @@
 from pyramid import Pyramid
 
 if __name__ == "__main__":
-    import os
+    import os #remove if dont have linux
     myPyramid = Pyramid()
     while 1:
             
@@ -51,4 +51,4 @@ if __name__ == "__main__":
             print("Plese Enter Correct number")
         
         input("\n Press any key...")
-        os.system("clear")
+        os.system("clear") #remove if dont have linux
