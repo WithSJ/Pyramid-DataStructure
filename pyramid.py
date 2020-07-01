@@ -6,7 +6,9 @@ class Node:
         self.right = None
         self.left = None
 class Pyramid:
-    # This  Data Structure help to store data in pyramid like structure                                     
+    """ This  Data Structure help to store data in 
+        pyramid like structure
+    """
     def __init__(self,rootdata="ROOT"):
         self.rootdata = rootdata
         ROOT_node = Node(rootdata)
@@ -16,7 +18,12 @@ class Pyramid:
         self.up_last = self.root 
         self.down_last = self.root
     
-    def insert_pyramid_layer(self,UpData=None,LeftData=None,DownData=None,RightData=None):
+    def insert_pyramid_layer(
+        self,UpData=None,
+        LeftData=None,
+        DownData=None,
+        RightData=None
+        ):
         """
             This Method use to insert data in pyramid layer 
             take four parameter as 
@@ -31,31 +38,50 @@ class Pyramid:
         new_LEFT_Node = Node(LeftData)
         new_RIGHT_Node = Node(RightData)
                 
-        self.left_last.left = new_LEFT_Node     # Insert New NOde Data in Left Most Node
-        self.right_last.right = new_RIGHT_Node  # Insert New NOde Data in Right Most Node
-        self.up_last.up = new_UP_Node           # Insert New NOde Data in Up Most Node
-        self.down_last.down = new_DOWN_Node     # Insert New NOde Data in Down Most Node     
+        self.left_last.left = new_LEFT_Node     
+        # Insert New NOde Data in Left Most Node
+        
+        self.right_last.right = new_RIGHT_Node  
+        # Insert New NOde Data in Right Most Node
+        
+        self.up_last.up = new_UP_Node           
+        # Insert New NOde Data in Up Most Node
+        
+        self.down_last.down = new_DOWN_Node     
+        # Insert New NOde Data in Down Most Node     
 
         temp = self.left_last
-        self.left_last = self.left_last.left     # Change Left Most Pointer to New Left Most Node
+        
+        self.left_last = self.left_last.left     
+        # Change Left Most Pointer to New Left Most Node
+        
         self.left_last.down = self.down_last.down
         self.left_last.up = self.up_last.up
         self.left_last.right = temp
 
         temp = self.right_last
-        self.right_last = self.right_last.right  # Change Right Most Pointer to New Right Most Node
+        
+        self.right_last = self.right_last.right  
+        # Change Right Most Pointer to New Right Most Node
+        
         self.right_last.down = self.down_last.down
         self.right_last.up = self.up_last.up
         self.right_last.left = temp
 
         temp = self.up_last
-        self.up_last = self.up_last.up           # Change UP Most Pointer to New UP Most Node
+        
+        self.up_last = self.up_last.up           
+        # Change UP Most Pointer to New UP Most Node
+        
         self.up_last.right = self.right_last
         self.up_last.left = self.left_last
         self.up_last.down = temp
 
         temp = self.down_last
-        self.down_last = self.down_last.down     # Change Down Most Pointer to New Down Most Node
+        
+        self.down_last = self.down_last.down     
+        # Change Down Most Pointer to New Down Most Node
+        
         self.down_last.right = self.right_last
         self.down_last.left = self.left_last
         self.down_last.up = temp
@@ -162,7 +188,9 @@ class Pyramid:
     
     def pop_pyramid_layer(self):
         """
-            delete pyramid layer from botom of pyramid ( means layer that insert in last that pop from this pyramid)
+            delete pyramid layer from botom of pyramid 
+            ( means layer that insert in last that pop 
+            from this pyramid)
         """
         
         if self.root == self.up_last :
@@ -189,7 +217,8 @@ class Pyramid:
 
     def dequeue_pyramid(self):
         """
-            Delete pyramid layer from TOP ( means pyramid layer that insert first )
+            Delete pyramid layer from TOP 
+            ( means pyramid layer that insert first )
         """
 
         if self.root == self.up_last :

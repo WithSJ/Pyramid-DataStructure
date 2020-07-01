@@ -23,7 +23,10 @@ if __name__ == "__main__":
         
         ch=input("Enter : ")
         if ch == "1":
-            myPyramid.insert_pyramid_layer(input("Enter Down Data :"),input("Enter Right Data :"),input("Enter Top Data :"),input("Enter Left Data :"))
+            myPyramid.insert_pyramid_layer(
+                input("Enter Down Data :"),input("Enter Right Data :"),
+                input("Enter Top Data :"),input("Enter Left Data :")
+                )
         elif ch == "2":
                 myPyramid.graph_view()
         elif ch == "3":
